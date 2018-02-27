@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "214517088836",
+    "firebase_url": "https://chat-app-b5d5d.firebaseio.com",
+    "project_id": "chat-app-b5d5d",
+    "storage_bucket": "chat-app-b5d5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214517088836:android:d43db42e362df99c",
+        "android_client_info": {
+          "package_name": "com.example.babur.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214517088836-kutttgtqglvfo8tgiau8crlf00eja1k1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.babur.chatapp",
+            "certificate_hash": "ddf79b2692e77ec1d8722c6b4153ef89731ee90a"
+          }
+        },
+        {
+          "client_id": "214517088836-srg8cfasl1j25bp6o8irs3f5ot5806av.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOjD8NK4fxIjSkPh-yDjv-ME-VBuKlazY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214517088836-srg8cfasl1j25bp6o8irs3f5ot5806av.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
