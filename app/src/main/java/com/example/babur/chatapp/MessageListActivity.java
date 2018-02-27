@@ -66,7 +66,7 @@ public class MessageListActivity extends AppCompatActivity
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        //getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_keyboard_left_arrow);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_keyboard_arrow_left);
     }
 
     //send button click for chat
