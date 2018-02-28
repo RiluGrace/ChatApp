@@ -1,6 +1,7 @@
 package com.example.babur.chatapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ import static android.view.View.GONE;
 public class MessageListActivity extends AppCompatActivity
 {
 
-    private FirebaseAnalytics mFirebaseAnalytics;
+  //  private FirebaseAnalytics mFirebaseAnalytics;
  RecyclerView mMessageRecycler;
  MessageListAdapter mMessageAdapter;
  private List <Message> mMessageList;
@@ -44,7 +45,7 @@ public class MessageListActivity extends AppCompatActivity
         setContentView(R.layout.activity_message_list);
 
        // Obtain the FirebaseAnalytics instance.
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+      //  mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         message=new Message();
         mMessageList=new ArrayList<>();
@@ -66,7 +67,16 @@ public class MessageListActivity extends AppCompatActivity
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_keyboard_arrow_left);
+       getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_keyboard_arrow_left);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+                startActivity(new Intent(MessageListActivity.this, SignInActivity.class));
+            }
+        });
     }
 
     //send button click for chat
