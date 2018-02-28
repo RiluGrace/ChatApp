@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgd"
+    tools:context="com.example.babur.chatapp.SignInActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayout0"
+
+
+        >
+        <TextView
+
+            android:id="@+id/signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="Sign in"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+
+
+            />
+
+
+        <EditText
+
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Username"
+            android:background="@drawable/stroke"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            android:textColorHint="@android:color/white"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:drawableLeft="@drawable/user"
+
+            />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:padding="10dp"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:background="@drawable/stroke"
+            android:textColorHint="@android:color/white"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:drawableLeft="@drawable/lock"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout1"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            >
+
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner"
+                android:textColor="#01579B"
+                android:text="SIGN IN" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner"
+                android:layout_below="@+id/linearLayout1"
+                android:onClick="rclick"
+                android:textColor="#01579B"
+                android:text="SIGN UP" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

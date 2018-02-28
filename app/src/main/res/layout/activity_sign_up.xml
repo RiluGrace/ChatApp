@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgd"
+    tools:context="com.example.babur.chatapp.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout0"
+        android:layout_marginTop="15dp"
+
+        >
+
+        <TextView
+
+            android:id="@+id/signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Sign Up"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            />
+
+
+        <EditText
+
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Name"
+            android:padding="10dp"
+            android:background="@drawable/stroke"
+            android:textColorHint="@android:color/white"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+
+            />
+
+
+        <EditText
+
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/stroke"
+            android:hint="Username"
+            android:padding="10dp"
+            android:textColorHint="@android:color/white"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+
+            />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke"
+            android:hint="Password"
+            android:padding="10dp"
+            android:textColorHint="@android:color/white"
+            android:inputType="textPassword"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            />
+
+        <EditText
+
+            android:id="@+id/et_numb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Ph No"
+            android:padding="10dp"
+            android:background="@drawable/stroke"
+            android:textColorHint="@android:color/white"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+
+            />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout1"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/linearLayout0"
+            android:layout_gravity="center"
+            android:background="@drawable/corner"
+            android:textColor="#01579B"
+            android:text="SIGN UP" />
+
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
