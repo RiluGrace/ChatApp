@@ -60,7 +60,7 @@ public class MessageListActivity extends AppCompatActivity
         mLayoutManager.setReverseLayout(true);
         mLayoutManager.setStackFromEnd(true);
 
-
+        // toolbar
         Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
         mToolbar.setTitle("");
         mToolbar.setTitleTextColor(Color.WHITE);

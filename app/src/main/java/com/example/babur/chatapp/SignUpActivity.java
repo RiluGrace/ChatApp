@@ -20,6 +20,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class SignUpActivity extends AppCompatActivity
 {
@@ -29,6 +33,8 @@ public class SignUpActivity extends AppCompatActivity
     private FirebaseAuth mAuth;
     //progress dialog
     private ProgressDialog mProgress;
+    //firebase database
+    private DatabaseReference mDatabase;
 
 
     @Override
@@ -72,7 +78,7 @@ public class SignUpActivity extends AppCompatActivity
         });
     }
 
-    private void registeruser(String name , String email , String password , String phno)
+    private void registeruser(final String name , String email , String password , String phno)
     {
 
        mAuth.createUserWithEmailAndPassword(email , password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -80,11 +86,33 @@ public class SignUpActivity extends AppCompatActivity
            public void onComplete(@NonNull Task<AuthResult> task) {
                if(task.isSuccessful())
                {
+                   FirebaseUser current_user = FirebaseAuth.getInstance().getCurrentUser();
+                   String uid = current_user.getUid();
 
-                   mProgress.dismiss();
-                   Intent intent = new Intent(SignUpActivity.this , SignInActivity.class);
-                   startActivity(intent);
-                   finish();
+                  // root directory
+                   mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
+
+                   // going to store complex data in hashmap
+                   HashMap<String , String> userMap = new HashMap<>();
+                   userMap.put("name", name);
+                   userMap.put("status","Hi,there i'm using ChatApp");
+                   userMap.put("image","default");
+                   userMap.put("thumb_image","default");
+
+                   mDatabase.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                       @Override
+                       public void onComplete(@NonNull Task<Void> task)
+                       {
+                         if(task.isSuccessful())
+                         {
+                             mProgress.dismiss();
+                             Intent intent = new Intent(SignUpActivity.this , SignInActivity.class);
+                             startActivity(intent);
+                             finish();
+                         }
+                       }
+                   });
+
                }
                else
                {
