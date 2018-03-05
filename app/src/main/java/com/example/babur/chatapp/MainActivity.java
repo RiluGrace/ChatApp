@@ -18,6 +18,7 @@ import android.view.View;
 import com.example.babur.chatapp.Fragments.ChatFragment;
 import com.example.babur.chatapp.Fragments.FriendsFragment;
 import com.example.babur.chatapp.Fragments.RequestFragment;
+import com.example.babur.chatapp.Models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -149,11 +150,17 @@ public class MainActivity extends AppCompatActivity
              sendToStart();
             FirebaseAuth.getInstance().signOut();
          }
+
         if(item.getItemId()== R.id.acc_setting)
         {
             Intent intent = new Intent(MainActivity.this , SettingsActivity.class);
             startActivity(intent);
-          
+        }
+
+        if(item.getItemId()== R.id.all_users)
+        {
+            Intent intent = new Intent(MainActivity.this , UsersActivity.class);
+            startActivity(intent);
         }
         return true;
     }
